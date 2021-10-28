@@ -1,7 +1,7 @@
 package com.datastructure;
 
 /*
- * Ability to create a Queue of 56->30->70
+ * Ability to dequeue from the beginning
  */
 public class MyQueueTest {
 
@@ -26,8 +26,17 @@ public class MyQueueTest {
 		System.out.println("IsFull: " + myQueue.isFull());
 		System.out.println("IsEmpty: " + myQueue.isEmpty());
 
+		// dequeue new element in the stack (From the top)
+		System.out.println("Dequeue-1 " + myQueue.dequeue().getKey());
+		System.out.println("Dequeue-2  " + myQueue.dequeue().getKey());
+		System.out.println("Dequeue-3  " + myQueue.dequeue().getKey());
+
+		System.out.println("Size: " + myQueue.size());
+		System.out.println("IsFull: " + myQueue.isFull());
+		System.out.println("IsEmpty: " + myQueue.isEmpty());
+
 		INode peak = myQueue.peak();
-		if (peak == myThirdNode)
+		if (peak == myFirstNode)
 			System.out.println("Nodes are Linked");
 		else
 			System.out.println("Not Linked");

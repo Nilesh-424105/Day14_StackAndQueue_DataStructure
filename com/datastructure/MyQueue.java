@@ -28,9 +28,19 @@ public class MyQueue {
 		if (isFull()) {
 			System.out.println("Queue OverFlow");
 			return;
-
 		}
 		myLinkedList.append(node);
+	}
+
+	/*
+	 * removes the first element from the queue
+	 */
+	public INode dequeue() {
+		if (isEmpty()) {
+			System.out.println("Queue Underflow");
+			return null;
+		}
+		return myLinkedList.pop();
 	}
 
 	/*
